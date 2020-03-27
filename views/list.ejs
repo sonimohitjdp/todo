@@ -1,0 +1,15 @@
+<%- include("header") -%>
+
+  <h1><%=listTitle%></h1>
+  <h2>Add tasks here...</h2>
+  <ul>
+    <% for(var i=0; i<taskItem.length; i++){ %>
+    <li><%=taskItem[i]%></li>
+    <% } %>
+  </ul>
+  <form action="/" method="post">
+    <input type="text" name="taskEntered" placeholder="Add your item here" autocomplete="off" autofocus="on">
+    <button type="submit" name="button" value=<%=listTitle%> >Add</button>
+  </form>
+  
+<%- include("footer") -%>
